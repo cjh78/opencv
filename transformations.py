@@ -33,10 +33,10 @@ def rotate(img, angle, rot_point=None):
     if rot_point is None:
         rot_point = (width//2,height//2)
 
-        rot_mat = cv.getRotationMatrix2D(rot_point, angle, 1.0)
-        dimensions = (width,height)
+    rot_mat = cv.getRotationMatrix2D(rot_point, angle, 1.0)
+    dimensions = (width,height)
 
-        return cv.warpAffine(img, rot_mat, dimensions)
+    return cv.warpAffine(img, rot_mat, dimensions)
 
 # 45 = anticlockwise
 # -45 = clockwise
